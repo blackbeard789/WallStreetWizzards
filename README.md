@@ -16,6 +16,7 @@ An API can be described as a set of rules and protocols that allows different so
 ### Yahoo Finance (dynamic)
 Yahoo Finance is a popular source of stock market data available for retail traders. Price data of many financial instruments can be accessed publicly and free of charge without login. However, clients may be blocked if too many requests are made. In the course of our project work, we have been able to confirm that several thousand enquiries can be made within a short space of time without any problems. Using the {yfinance} package, which was developed by the Python community, it is possible to get the data from Yahoo Finance via API.
 Link: https://pypi.org/project/yfinance/
+https://github.com/ranaroussi/yfinance
 
 ### Alpha Vantage (dynamic)
 This API returns live and historical market news as well as sentiment data from a large (and still growing) selection of premier news outlets around the world, covering stocks, cryptocurrencies, forex, and a wide range of topics such as fiscal policy, mergers and acquisitions, IPOs, etc. Additionally, financial data of companies (e.g. dividend yield, EPS, P/E-Ratio) can also be received via API. For this project, we were able to request a free "premium" API key for academic purposes from Alpha Vantage. This means that the number of requests per day is not limited to 90, but an unlimited number of requests can be made.
@@ -39,6 +40,7 @@ To run this project, you'll need to have the following Python packages installed
     pandas
     google-cloud-storage
     psycopg2
+    yfinance
 
 You can install these packages via pip. Run the following commands in your terminal or command prompt:
 ```bash
@@ -47,6 +49,7 @@ pip install requests
 pip install pandas
 pip install google-cloud-storage
 pip install psycopg2-binary
+pip install yfinance
 ```
 
 
@@ -70,9 +73,11 @@ For the credentials a config.ini file is needed, where the credentials are store
 
 ### config.ini file
 The file has to be formated in the following form, so it can be correctly ingested:
+```
 [postgresql]
 user = test
 password = test
 host = test
 port = test
 database = newsdata
+```
