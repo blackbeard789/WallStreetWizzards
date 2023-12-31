@@ -55,7 +55,7 @@ For this project apache airflow was used. This have to be set up in the first pl
 https://airflow.apache.org/
 
 #### DAGs
-The DAGs have to be inserted in the DAG folder of the apache airflow installation in pyhton. The following files are the needed DAGs:
+The DAGs have to be inserted in the DAG folder of the apache airflow installation in python. The following files are the needed DAGs:
 - alphavantage_news_daily.py
 - alphavantage_news_hist.py
 - yfinance_prices_current.py
