@@ -30,21 +30,42 @@ Link: https://en.wikipedia.org/wiki/List_of_S%26P_500_companies
 The project schema and methodology is visualized in the following figure
 ![image](https://github.com/blackbeard789/WallStreetWizzards/assets/153673259/046425ca-f8c0-4c5d-aa24-83f4590abf81)
 
-
 ## Installation
 ### Packages
+To run this project, you'll need to have the following Python packages installed:
 
-### alphavantage_metrics.py
-Is setup for a onetime execution to insert the data into a sql database. The script can be run in python localy with the right packages installed. 
+    configparser
+    requests
+    pandas
+    google-cloud-storage
+    psycopg2
 
-### DAGs
-The DAGs have to be inserted in the DAG folder of 
+You can install these packages via pip. Run the following commands in your terminal or command prompt:
+```bash
+pip install configparser
+pip install requests
+pip install pandas
+pip install google-cloud-storage
+pip install psycopg2-binary
+```
+
+
+### Apache Airflow
+For this project apache airflow was used. This have to be set up in the first place, to run the scripts. The documentation can be found here:
+https://airflow.apache.org/
+
+#### DAGs
+The DAGs have to be inserted in the DAG folder of the apache airflow installation in pyhton. The following files are the needed DAGs:
 - alphavantage_news_daily.py
 - alphavantage_news_hist.py
 - yfinance_prices_current.py
 - yfinance_prices_yesterday.py
 
-### Credetials
+
+### Metrics
+The alphavantage_metrics.py is setup for a onetime execution to insert the data into a sql database. The script can be run in python localy with the right packages installed. 
+
+### Credentials
 For the credentials a config.ini file is needed, where the credentials are stored. Additionaly for the google cloud bucket, a json file is needed. This file can be created in the google cloud itself and have to be downloaded
 
 ### config.ini file
