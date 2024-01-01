@@ -54,11 +54,11 @@ pip install yfinance
 
 
 ### Apache Airflow
-For this project apache airflow was used. This have to be set up in the first place, to run the scripts. The documentation can be found here:
+For this project Apache Airflow was used. This have to be set up in the first place, to run the scripts. The documentation can be found here:
 https://airflow.apache.org/
 
 #### DAGs
-The DAGs have to be inserted in the DAG folder of the apache airflow installation in python. The following files are the needed DAGs:
+The DAGs have to be inserted in the DAG folder of the Apache Airflow installation in python. The following files are the needed DAGs:
 - alphavantage_news_daily.py
 - alphavantage_news_hist.py
 - yfinance_prices_current.py
@@ -69,7 +69,7 @@ The DAGs have to be inserted in the DAG folder of the apache airflow installatio
 The alphavantage_metrics.py is setup for a onetime execution to insert the data into a sql database. The script can be run in python localy with the right packages installed. 
 
 ### Credentials
-For the credentials a config.ini file is needed, where the credentials are stored. Additionaly for the google cloud bucket, a json file is needed. This file can be created in the google cloud itself and have to be downloaded
+For the credentials a config.ini file is needed, where the credentials are stored. Additionaly for the google cloud bucket, a json file is needed. This file can be created in the google cloud itself and has to be downloaded
 
 ### config.ini file
 The file has to be formated in the following form, so it can be correctly ingested:
